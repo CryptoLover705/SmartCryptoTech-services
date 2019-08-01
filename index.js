@@ -28,12 +28,12 @@ const logger = winston.createLogger({
     new winston.transports.Console(),
     new winston.transports.File({
       filename: path.join(utils.ensureUserDataDir(), 'info.log'),
-      maxsize: 10000000,
+      maxsize: 100000000,
       maxFiles: 5
     }),
     new winston.transports.File({
       filename: path.join(utils.ensureUserDataDir(), 'errors.log'),
-      maxsize: 10000000,
+      maxsize: 100000000,
       maxFiles: 5,
       level: 'error'
     })
@@ -41,7 +41,7 @@ const logger = winston.createLogger({
   exceptionHandlers: [
     new winston.transports.File({
       filename: path.join(utils.ensureUserDataDir(), 'exceptions.log'),
-      maxsize: 10000000,
+      maxsize: 100000000,
       maxFiles: 5
     })
   ],
