@@ -1,12 +1,12 @@
 {
-  "name": "conceal-services",
+  "name": "SmartCrytoTech-services",
   "version": "1.0.0",
-  "description": "Conceal Misc Services",
+  "description": "SmartCrytoTech Misc Services",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Taegus",
+  "author": "CryptoLover",
   "license": "GPL-3.0",
   "dependencies": {
     "array-smooth": "^1.0.0",
