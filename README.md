@@ -1,12 +1,11 @@
-# Conceal Services
-Conceal services offered through a simple API. 
+# SmartCryptoTech Services
+SmartCryptoTech services offered through a simple API. 
 
 Currently there are 3 chart API calls supported that return PNG images as result. The calls have the following endpoints:
 
-* /charts/price.png -> Price history for the Conceal coin
-* /charts/volume.png -> Volume history for the Conceal coin
-* /charts/marketcap.png -> Marketcap history for the Conceal coin
-
+* /charts/price.png -> Price history for the SmartCryptoTech
+* /charts/volume.png -> Volume history for the SmartCryptoTech
+* /charts/marketcap.png -> Marketcap history for the SmartCryptoTech
 The type chart you get back depends on the parameters you pass in the URL.
 
 # Supported Parameters
