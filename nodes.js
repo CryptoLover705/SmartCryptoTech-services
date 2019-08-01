@@ -10,7 +10,7 @@ const geoip = require('geoip-lite');
 class nodes {
   constructor() {
     this.addressList = [
-      "https://explorer.conceal.network/daemon/getpeers"
+      "https://blockexplorer.smart-crypto-tech.co.uk/network"
     ];
 
     this.nodeCache = new NodeCache({ stdTTL: config.nodes.cache.expire, checkperiod: config.nodes.cache.checkPeriod }); // the cache object
@@ -26,9 +26,9 @@ class nodes {
     var nodeCacheInstance = this.nodeCache;
 
     request.get({
-      url: "https://explorer.conceal.network/pool/list?isReachable=true",
+      url: "https://blockexplorer.smart-crypto-tech.co.uk/pool/list?isReachable=false",
       json: true,
-      headers: { 'User-Agent': 'Conceal Services' }
+      headers: { 'User-Agent': 'SmartCrytoTech Services' }
     }, (err, res, data) => {
       if (err) {
         console.log('Error:', err.message);
@@ -38,7 +38,7 @@ class nodes {
         if (data.success) {
 
           data.list.forEach(function (value) {
-            addressListInstance.push(vsprintf("http://%s:%s/getpeers", [value.nodeHost, value.nodePort]));
+            addressListInstance.push(vsprintf("https://%s:%s/network", [value.nodeHost, value.nodePort]));
           });
 
           // now loop all the addressed from the list
@@ -46,7 +46,7 @@ class nodes {
             request.get({
               url: value,
               json: true,
-              headers: { 'User-Agent': 'Conceal Services' }
+              headers: { 'User-Agent': 'SmartCryptoTech Services' }
             }, (err, res, data) => {
               if (err) {
                 console.log('Error:', err.message);
