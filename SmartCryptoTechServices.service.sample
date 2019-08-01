@@ -1,5 +1,5 @@
 [Unit]
-Description=ConcealServices
+Description=SmartCryptoTechServices
 
 [Service]
 Type=simple
